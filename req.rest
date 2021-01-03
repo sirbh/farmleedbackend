@@ -1,0 +1,70 @@
+POST http://localhost:8080/post
+Content-Type: application/json
+
+{
+    "user":"userName"
+}
+ 
+###
+
+POST http://localhost:8080/post
+Content-Type: application/json
+
+{
+    "user":"saurab"
+}
+
+###
+
+POST http://localhost:8080/signup
+Content-Type: application/json 
+
+{
+    "username":"saurabh chauhan",
+    "password":"password",
+    "confirmPassword":"password",
+    "email":"prashant1202@gmail.com",
+    "phone":"989898989898"
+}
+
+###
+
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+    "email":"sourabh1202@gmail.com",
+    "password":"password"
+}
+###
+
+POST http://localhost:8080/setcart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmEwNDVjODQzMTI4ZDRiYTg1NjU3YjUiLCJpYXQiOjE2MDQ0NTkxMzksImV4cCI6MTYwNDQ1OTE1NH0.Xd8GCeWszmVSCbC1YwJkXvygh2ykk6F5VZS2CqmQ1Gs
+
+{
+    "email":"sourabh1202@gmail.com",
+    "password":"pass"
+}
+
+###
+POST http://localhost:8080/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZmEyYzUzNjA2ZjRlNjU3ZThkZDJlMzQiLCJpYXQiOjE2MDQ2MDEzNjIsImV4cCI6MTYwNDYwMTQyMn0.WwwK4gkzn5xH8Mf4Xq49QRFiCyRj7nsJtX-2OKPn3PE
+
+{
+    "email":"sourabh1202@gmail.com",
+    "password":"pass"
+}
+
+###
+POST http://localhost:8080/queryproducts
+Content-Type: application/json
+
+{
+    "query":"cap"
+}
+
+###
+GET http://localhost:8080/getorders
+
