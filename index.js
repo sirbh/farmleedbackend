@@ -43,7 +43,7 @@ app.use((error,req,res,next)=>{
 
 mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:CUWgdvFWgTGA48A@cluster0.bzsgk.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`,{ useNewUrlParser: true ,useUnifiedTopology: true })
         .then(data=>{
-            const server = app.listen(8080);
+            const server = app.listen(process.env.PORT||8080);
             const io = require('socket.io')(server,{
                 cors: {
                   origin: "*",
