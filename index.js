@@ -41,7 +41,7 @@ app.use((error,req,res,next)=>{
 
 // app.listen(8080);
 
-mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:CUWgdvFWgTGA48A@cluster0.bzsgk.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`,{ useNewUrlParser: true ,useUnifiedTopology: true })
+mongoose.connect(`mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.bzsgk.mongodb.net/${process.env.MONGO_DATABASE}?retryWrites=true&w=majority`,{ useNewUrlParser: true ,useUnifiedTopology: true })
         .then(data=>{
             const server = app.listen(process.env.PORT||8080);
             const io = require('socket.io')(server,{
